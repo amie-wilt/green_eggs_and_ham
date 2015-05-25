@@ -26,8 +26,6 @@ class GreenEggsAndHam
   end
 
   def frequency_of_unique_words
-    hash = Hash.new(0)
-    @text.downcase.gsub(/[^a-z-]/, ' ').split.each{|key| hash[key] += 1}
-    hash
+    @text.downcase.gsub(/[^a-z-]/, ' ').split.each_with_object(Hash.new(0)){|key, hash| hash[key] += 1}
   end
 end
