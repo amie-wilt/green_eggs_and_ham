@@ -17,10 +17,7 @@ class GreenEggsAndHam
   end
 
   def number_of_words_shorter_than(x)
-    @wordsarray = @text.downcase.gsub(/[^a-z-]/, ' ').split.uniq.sort
-    @newarray = @wordsarray.reject { |i| i.length > x }
-    @newarray.length
+    @shortwords = @text.downcase.gsub(/[^a-z-]/, ' ').split.select {|n| n.length < x}
+    @shortwords.length
   end
 end
-
-puts @newarray.lengthgit
