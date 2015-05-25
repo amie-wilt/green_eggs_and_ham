@@ -32,4 +32,11 @@ class GreenEggsAndHam
   def stanzas
     @text.split(/\n\n/)
   end
+
+  def lines
+
+  end
 end
+
+
+puts @shortwords
