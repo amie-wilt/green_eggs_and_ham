@@ -20,4 +20,8 @@ class GreenEggsAndHam
     @shortwords = @text.downcase.gsub(/[^a-z-]/, ' ').split.select {|n| n.length < x}
     @shortwords.length
   end
+
+  def longest_word
+    @text.split(" ").max_by(&:length)
+  end
 end
