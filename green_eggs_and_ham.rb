@@ -24,4 +24,10 @@ class GreenEggsAndHam
   def longest_word
     @text.split(" ").max_by(&:length)
   end
+
+  def frequency_of_unique_words
+    hash = Hash.new(0)
+    @text.downcase.gsub(/[^a-z-]/, ' ').split.each{|key| hash[key] += 1}
+    hash
+  end
 end
